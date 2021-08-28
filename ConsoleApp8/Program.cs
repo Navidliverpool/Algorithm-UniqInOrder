@@ -16,7 +16,6 @@ namespace ConsoleApp8
         public static IEnumerable<char> UniqueInOrder<T>(IEnumerable<T> iterable)
         {
             return CheckMeth<T>(iterable);
-
         }
 
         private static IEnumerable<char> CheckMeth<T>(IEnumerable<T> iterable)
@@ -38,7 +37,6 @@ namespace ConsoleApp8
                    if (checker)
                    {
                        list.Add(iterable.ToString()[i]);
-                      
                    }
                }          
 
