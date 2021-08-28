@@ -7,7 +7,7 @@ namespace ConsoleApp8
     {
         static void Main(string[] args)
         {
-            foreach (var i in CheckMeth("HHHELLLOFFGG"))
+            foreach (var i in CheckMeth("HRR    RR    TTttMM"))
             {
                 Console.WriteLine(i + ",");
             }
@@ -22,7 +22,9 @@ namespace ConsoleApp8
         private static IEnumerable<char> CheckMeth<T>(IEnumerable<T> iterable)
         {
             var list = new List<char>();
-           
+            if (iterable == null)
+                return list.ToString();
+
                for(int i = 0; i < iterable.ToString().Length; i++)
                {
                    var checker = true;
