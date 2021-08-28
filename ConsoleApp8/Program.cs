@@ -7,7 +7,7 @@ namespace ConsoleApp8
     {
         static void Main(string[] args)
         {
-            foreach(var i in UniqueInOrder("SAAALAM"))
+            foreach(var i in UniqueInOrder("HELLLO"))
             {
                 Console.WriteLine(i + ",");
             }
