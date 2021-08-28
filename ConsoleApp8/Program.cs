@@ -7,7 +7,7 @@ namespace ConsoleApp8
     {
         static void Main(string[] args)
         {
-            foreach(var i in UniqueInOrder("HELLLO"))
+            foreach (var i in CheckMeth("HHHELLLOFFGG"))
             {
                 Console.WriteLine(i + ",");
             }
@@ -15,27 +15,28 @@ namespace ConsoleApp8
 
         public static IEnumerable<char> UniqueInOrder<T>(IEnumerable<T> iterable)
         {
-          return MyMeth<T>(iterable);
-           
+            return CheckMeth<T>(iterable);
+
         }
 
-        private static IEnumerable<char> MyMeth<T>(IEnumerable<T> iterable)
+        private static IEnumerable<char> CheckMeth<T>(IEnumerable<T> iterable)
         {
             var list = new List<char>();
            
-               for(int i = 0; i < iterable.ToString().Length - 1; i++)
+               for(int i = 0; i < iterable.ToString().Length; i++)
                {
                    var checker = true;
                    var t = iterable.ToString();
 
-                    if (t[i] == t[i + 1])
+                    if (i != 0 && t[i - 1] == t[i])
                     {
                         checker = false;
                     }
-                 
+
                    if (checker)
                    {
                        list.Add(iterable.ToString()[i]);
+                      
                    }
                }          
 
