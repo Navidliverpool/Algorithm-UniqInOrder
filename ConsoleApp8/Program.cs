@@ -7,9 +7,9 @@ namespace ConsoleApp8
     {
         static void Main(string[] args)
         {
-            foreach (var i in CheckMeth("HRR    RR    TTttMM"))
+            foreach (var item in CheckMeth("HRR    RR    TTttMM"))
             {
-                Console.WriteLine(i + ",");
+                Console.WriteLine(item + ",");
             }
         }
 
